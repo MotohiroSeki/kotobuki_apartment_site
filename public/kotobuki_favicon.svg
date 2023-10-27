@@ -1,0 +1,24 @@
+<svg width="1128" height="710" viewBox="0 0 1128 710" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="564" cy="496.5" rx="564" ry="213.5" fill="#949494"/>
+<ellipse cx="563.5" cy="477" rx="529.5" ry="202" fill="#F3FBFF"/>
+<path d="M816.21 10C915.747 214.3 715.435 265.375 835.915 436" stroke="url(#paint0_linear_26_21)" stroke-width="20" stroke-linecap="round"/>
+<path d="M330.21 10C429.747 214.3 229.435 265.375 349.915 436" stroke="url(#paint1_linear_26_21)" stroke-width="20" stroke-linecap="round"/>
+<path d="M584.21 10C683.747 214.3 483.435 265.375 603.915 436" stroke="url(#paint2_linear_26_21)" stroke-width="20" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_26_21" x1="820.5" y1="10" x2="820.5" y2="436" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BABABA" stop-opacity="0"/>
+<stop offset="0.385417" stop-color="#BABABA" stop-opacity="0.595092"/>
+<stop offset="0.848958" stop-color="#BABABA"/>
+</linearGradient>
+<linearGradient id="paint1_linear_26_21" x1="334.5" y1="10" x2="334.5" y2="436" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BABABA" stop-opacity="0"/>
+<stop offset="0.385417" stop-color="#BABABA" stop-opacity="0.595092"/>
+<stop offset="0.848958" stop-color="#BABABA"/>
+</linearGradient>
+<linearGradient id="paint2_linear_26_21" x1="588.5" y1="10" x2="588.5" y2="436" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BABABA" stop-opacity="0"/>
+<stop offset="0.385417" stop-color="#BABABA" stop-opacity="0.595092"/>
+<stop offset="0.848958" stop-color="#BABABA"/>
+</linearGradient>
+</defs>
+</svg>

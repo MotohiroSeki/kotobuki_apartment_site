@@ -1,0 +1,15 @@
+@import "const";
+
+.home {
+    &__body {
+        &__outlook {
+            img {
+                border-radius: 0 30px 30px 0;
+                width: 80%;
+                @include mq(tb){
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
