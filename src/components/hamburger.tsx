@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import styles from 'src/styles/components/hamburger.module.scss';
 import Link from 'next/link';
 
@@ -23,18 +23,20 @@ const HamburgerMenu = () => {
 
             {isOpen && (
                 <div className={`${styles.modal} ${styles.open}`} onClick={closeMenu}>
+                    <div className={styles.closer}>
                         <div className={styles.bar}></div>
                         <div className={styles.bar}></div>
                         <div className={styles.bar}></div>
+                    </div>
                     <div className={styles.sidebar}>
                         <Link href="/" passHref>
-                            <div className={styles.link}>Home</div>
+                            <div className={styles.link}>ホーム</div>
                         </Link>
-                        <Link href="/about" passHref>
-                            <div className={styles.link}>About</div>
+                        <Link href="/access" passHref>
+                            <div className={styles.link}>アクセス</div>
                         </Link>
                         <Link href="/contact" passHref>
-                            <div className={styles.link}>Contact</div>
+                            <div className={styles.link}>お問い合わせ・内見申込</div>
                         </Link>
                     </div>
                 </div>
