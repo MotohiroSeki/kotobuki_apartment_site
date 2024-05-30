@@ -24,7 +24,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </h4>
         <p>〒811-1311</p>
         <p>福岡県福岡市南区横手4-13-31</p>
-        <iframe src="http://maps.google.co.jp/maps?&output=embed&q=福岡市南区横手4-13-31"></iframe>
+        <iframe src="https://maps.google.co.jp/maps?&output=embed&q=福岡市南区横手4-13-31"></iframe>
       </footer>
     </div>
   );
