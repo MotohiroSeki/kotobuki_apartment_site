@@ -2,18 +2,28 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "const";
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 :root {
-  background-color: #eee1c5;
+  background-color: $accent-color;
 }
 
 body {
   margin: 0 auto;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom right,#ffedc5,#fff);
+  background: linear-gradient(to bottom right,$background-darkest,$background-lightest);
   max-width: 1280px;
-  padding: 0 40px;
-
+  padding: 0 10%;
+  @include mq(tb) {
+    padding: 0 40px;
+  }
+  img {
+    border-radius: 5px;
+    @include mq(tb) {
+      max-width: 800px;
+    }
+  }
+  font-size: 1.5rem;
   header {
     display:flex;
     justify-content: space-between;
@@ -24,14 +34,40 @@ body {
     }
   }
 
+  footer {
+    margin: 120px -12%;
+    padding: 80px 15%;
+    background-color: $accent-color;
+    img {
+      min-width: 70px;
+      min-height: 70px;
+      max-width: 120px;
+      margin: 60px auto;
+    }
+  }
+
   h2 {
     margin: 30px auto;
     padding: 0 20px;
     font-size: 2.0rem;
     font-family: Arial, Helvetica, sans-serif;
     border-left: solid 10px #af9f7c;
+    border-radius: 5px;
   }
 
+  h4 {
+    margin: 10px auto;
+    font-size: 1.7rem;
+  }
+
+  iframe {
+    margin: 20px auto;
+    @include mq(tb) {
+      width: 600px;
+      height: 500px;
+    }
+    
+  }
 }
 
 html {

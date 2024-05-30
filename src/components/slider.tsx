@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import styles from 'src/styles/components/pictureSlider.module.scss';
+import styles from 'src/styles/components/slider.module.scss';
 
 const PictureSlider = ({ images }: { images: string[] }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const totalOfIndex = images.length
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
@@ -25,16 +25,20 @@ const PictureSlider = ({ images }: { images: string[] }) => {
     }, [currentIndex]); // Dependency array to reset the interval when currentIndex changes
 
     return (
-        <div className={styles.slider}>
-            <button onClick={goToPrevious} className={styles.arrow}>
-                ❮
-            </button>
+        <div>
             <div className={styles.imageContainer}>
                 <img src={images[currentIndex]} alt="slider image" className={styles.image} />
             </div>
-            <button onClick={goToNext} className={styles.arrow}>
-                ❯
-            </button>
+            <div className={styles.slider}>
+
+                <button onClick={goToPrevious} className={styles.arrow}>
+                    ◀︎
+                </button>
+                <p>{currentIndex+1}&nbsp;/&nbsp;{totalOfIndex}</p>
+                <button onClick={goToNext} className={styles.arrow}>
+                    ▶︎
+                </button>
+            </div>
         </div>
     );
 };

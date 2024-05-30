@@ -1,0 +1,17 @@
+#contact_us {
+    &::before {
+        vertical-align: -15%;
+        margin: 0 7px 0 0;
+        font-family: 'Material Icons';
+        content: "\e0d0";
+    }
+}
+
+#address {
+    &::before {
+        vertical-align: -15%;
+        margin: 0 7px 0 0;
+        font-family: 'Material Icons';
+        content: "\e55b";
+    }
+}
