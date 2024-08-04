@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import HamburgerMenu from '../components/hamburger';
 import FooterStyle from '../styles/components/footer.module.scss';
+import ImageWithPlaceholder from '@/components/picture';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -9,7 +10,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className={inter.className}>
       <header>
-        <img src="/kotobuki_header.png" alt="" />
+        <ImageWithPlaceholder src="/kotobuki_header.png" alt="" />
         <HamburgerMenu />
       </header>
       {children}
