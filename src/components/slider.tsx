@@ -27,7 +27,7 @@ const PictureSlider = ({ images,delay }: { images: string[], delay:number }) => 
     return (
         <div>
             <div className={styles.imageContainer}>
-                <img src={images[currentIndex]} alt="slider image" className={styles.image} />
+                <img src={images[currentIndex]} alt="slider image" loading='lazy' className={styles.image} />
             </div>
             <div className={styles.slider}>
 
