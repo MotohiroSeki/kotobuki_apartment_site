@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from 'src/styles/components/slider.module.scss';
 
-const PictureSlider = ({ images }: { images: string[] }) => {
+const PictureSlider = ({ images,delay }: { images: string[], delay:number }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalOfIndex = images.length
     const goToPrevious = () => {
@@ -19,7 +19,7 @@ const PictureSlider = ({ images }: { images: string[] }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             goToNext();
-        }, 5000); // Slide every 5 seconds
+        }, delay); // Slide every 5 seconds
 
         return () => clearInterval(interval); // Cleanup the interval on component unmount
     }, [currentIndex]); // Dependency array to reset the interval when currentIndex changes
