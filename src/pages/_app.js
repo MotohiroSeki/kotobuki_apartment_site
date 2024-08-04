@@ -16,6 +16,7 @@ export default function App({ Component, pageProps }) {
         <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
       </Head>
       <Component {...pageProps} />
     </RootLayout>

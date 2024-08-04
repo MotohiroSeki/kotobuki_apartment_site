@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import styles from 'src/styles/components/hamburger.module.scss';
 import Link from 'next/link';
