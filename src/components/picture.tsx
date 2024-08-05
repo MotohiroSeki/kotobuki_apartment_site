@@ -12,7 +12,7 @@ const ImageWithPlaceholder = ({ src, alt }:{src:string, alt:string}) => {
   }, [src]);
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div>
       {!isLoaded && (
         <img
           src="loading_img.svg"
@@ -23,7 +23,7 @@ const ImageWithPlaceholder = ({ src, alt }:{src:string, alt:string}) => {
       <img
         src={src}
         alt={alt}
-        style={{ display: isLoaded ? 'block' : 'none', width: '100%', height: '100%' }}
+        style={{ display: isLoaded ? 'block' : 'none'}}
       />
     </div>
   );
