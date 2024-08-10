@@ -12,21 +12,27 @@
   }
   
   .imageContainer {
+    display: flex;
     text-align: center;
     justify-content: center;
+    align-items: center;
     border-radius: 3px;
+    height: 250px;
+    background-color: $accent-color;
     @include mq(tb){
-        background-color: $accent-color;
+      height: 450px;
+    }
+    @include mq(tb){
         padding: 30px;
     }
   }
   
   .image {
-    height: 250px;
+    max-height: 220px;
     @include mq(tb){
-      height: 450px;
+      max-height: 420px;
     }
-    max-width: 100%;
+    max-width: 95%;
     border-radius: 10px;
     margin: 0 auto;
   }

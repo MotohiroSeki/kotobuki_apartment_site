@@ -3,7 +3,7 @@ import styles from 'src/styles/components/slider.module.scss';
 import useImagePreloader from 'src/controller/useImagePreloader'
 import Preloader from './imagePreloader';
 
-const PictureSlider = ({ images,delay }: { images: string[], delay:number }) => {
+const PictureSlider = ({ images, delay }: { images: string[], delay: number }) => {
     const imagesPreloaded = useImagePreloader(images)
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalOfIndex = images.length
@@ -27,26 +27,25 @@ const PictureSlider = ({ images,delay }: { images: string[], delay:number }) => 
         return () => clearInterval(interval); // Cleanup the interval on component unmount
     }, [currentIndex]); // Dependency array to reset the interval when currentIndex changes
 
-    if(!imagesPreloaded){
+    if (!imagesPreloaded) {
         return <div>Loading...</div>
     }
     return (
         <Preloader imageSources={images}>
-        <div>
-            <div className={styles.imageContainer}>
-                <img src={images[currentIndex]} alt="slider image" loading='lazy' className={styles.image} />
+            <div>
+                <div className={styles.imageContainer}>
+                    <img src={images[currentIndex]} alt="slider image" loading='lazy' className={styles.image} />
+                </div>
+                <div className={styles.slider}>
+                    <button onClick={goToPrevious} className={styles.arrow}>
+                        ◀︎
+                    </button>
+                    <p>{currentIndex + 1}&nbsp;/&nbsp;{totalOfIndex}</p>
+                    <button onClick={goToNext} className={styles.arrow}>
+                        ▶︎
+                    </button>
+                </div>
             </div>
-            <div className={styles.slider}>
-
-                <button onClick={goToPrevious} className={styles.arrow}>
-                    ◀︎
-                </button>
-                <p>{currentIndex+1}&nbsp;/&nbsp;{totalOfIndex}</p>
-                <button onClick={goToNext} className={styles.arrow}>
-                    ▶︎
-                </button>
-            </div>
-        </div>
         </Preloader>
     );
 };
