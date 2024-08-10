@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import styles from 'src/styles/components/hamburger.module.scss';
 import Link from 'next/link';
@@ -16,14 +15,15 @@ const HamburgerMenu = () => {
 
     return (
         <div>
-            <div className={isOpen ? `${styles.menu} ${styles.open}` : styles.menu} onClick={toggleMenu}>
-                <div>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
+            <div className={styles.frame}>
+                <div className={isOpen ? `${styles.menu} ${styles.open}` : styles.menu} onClick={toggleMenu}>
+                    <div>
+                        <div className={styles.bar}></div>
+                        <div className={styles.bar}></div>
+                        <div className={styles.bar}></div>
+                    </div>
                 </div>
             </div>
-
             {isOpen && (
                 <div className={`${styles.modal} ${styles.open}`} onClick={closeMenu}>
                     <div className={styles.closer}>

@@ -1,3 +1,4 @@
+'use client';
 import { Inter } from 'next/font/google';
 import HamburgerMenu from '../components/hamburger';
 import FooterStyle from '../styles/components/footer.module.scss';
