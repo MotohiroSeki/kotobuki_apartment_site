@@ -1,5 +1,5 @@
-import React from 'react'
-import useImagePreloader from 'src/controller/useImagePreloader'
+import React from 'react';
+import useImagePreloader from 'src/controller/useImagePreloader';
 
 interface PreloaderProps {
   imageSources: string[]
@@ -7,13 +7,13 @@ interface PreloaderProps {
 }
 
 const Preloader: React.FC<PreloaderProps> = ({ imageSources, children }) => {
-  const imagesPreloaded = useImagePreloader(imageSources)
+  const imagesPreloaded = useImagePreloader(imageSources);
 
   if (!imagesPreloaded) {
     return <div>Loading...</div>
   }
 
   return <>{children}</>
-}
+};
 
 export default Preloader
