@@ -19,7 +19,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className={inter.className}>
       <header>
-          <img src={imageSources.header} alt="header"/>
+        <a href="/"><img src={imageSources.header} alt="header"/></a>   
         <HamburgerMenu />
       </header>
       {children}
