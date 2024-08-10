@@ -19,6 +19,7 @@ body {
   }
   img {
     border-radius: 5px;
+    max-width: calc(95% - 40px);
     @include mq(tb) {
       max-width: 800px;
     }

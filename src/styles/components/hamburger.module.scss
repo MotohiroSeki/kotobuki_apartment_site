@@ -1,7 +1,12 @@
 @import "../const";
 
 .menu {
-
+  height: 40px;
+  width: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   .bar {
     background: #b88c2e;
     height: 3px;
