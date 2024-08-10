@@ -1,7 +1,7 @@
 'use client';
 import './../styles/globals.scss'
-import style from '../styles/home.module.scss'
-import HamburgerMenu from '../components/hamburger';
+import HomeStyle from '../styles/home.module.scss'
+import AccessStyle from '../styles/access.module.scss'
 import PictureSlider from '@/components/slider';
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
   ];
   return (
     <main>
-      <div className={style["home__body"]}>
+      <div className={HomeStyle["home__body"]}>
         <h2>
           西鉄大橋駅からのアクセス方法
         </h2>
@@ -26,8 +26,7 @@ export default function Home() {
         ことぶきマンションの最寄駅は西鉄大橋駅となっております。<br />
         大橋駅からは以下のルートでお越しになれます。
         </div>
-        
-        <PictureSlider images={routeOhashiWestSide} delay={3000}/>
+        <PictureSlider images={routeOhashiWestSide} delay={5000}/>
       </div>
     </main>
   )
