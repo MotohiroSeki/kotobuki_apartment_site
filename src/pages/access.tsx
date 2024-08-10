@@ -18,7 +18,6 @@ export default function Home() {
   ];
   return (
     <main>
-      <HamburgerMenu />
       <div className={style["home__body"]}>
         <h2>
           西鉄大橋駅からのアクセス方法

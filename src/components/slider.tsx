@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from 'src/styles/components/slider.module.scss';
 import useImagePreloader from 'src/controller/useImagePreloader'
-import Image from 'next/image'
 import Preloader from './imagePreloader';
 
 const PictureSlider = ({ images,delay }: { images: string[], delay:number }) => {
@@ -35,7 +34,7 @@ const PictureSlider = ({ images,delay }: { images: string[], delay:number }) => 
         <Preloader imageSources={images}>
         <div>
             <div className={styles.imageContainer}>
-                <Image src={images[currentIndex]} alt="slider image" loading='lazy' className={styles.image} />
+                <img src={images[currentIndex]} alt="slider image" loading='lazy' className={styles.image} />
             </div>
             <div className={styles.slider}>
 
