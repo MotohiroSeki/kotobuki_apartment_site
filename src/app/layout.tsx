@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import HamburgerMenu from '../components/hamburger';
 import FooterStyle from '../styles/components/footer.module.scss';
 import useImagePreloader from '@/controller/useImagePreloader';
+import Link from 'next/link';
 
 
 const imageSources: { [key: string]: string } = {
@@ -19,7 +20,9 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className={inter.className}>
       <header>
-        <a href="/"><img src={imageSources.header} alt="header"/></a>   
+        <Link href="/">
+          <img src={imageSources.header} alt="header" />
+        </Link>
         <HamburgerMenu />
       </header>
       {children}
