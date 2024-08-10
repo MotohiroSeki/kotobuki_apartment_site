@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main>
       <div className={HomeStyle["home__body"]}>
-        <h2>
+        <h2 style={{marginTop:0}}>
           西鉄大橋駅からのアクセス方法
         </h2>
         <div style={{ marginBottom: '60px' }} >
