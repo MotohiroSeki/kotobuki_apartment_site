@@ -1,48 +1,25 @@
 import { Inter } from 'next/font/google';
 import HamburgerMenu from '../components/hamburger';
 import FooterStyle from '../styles/components/footer.module.scss';
+import useImagePreloader from '@/controller/useImagePreloader';
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
 
 const imageSources: { [key: string]: string } = {
   header: '/kotobuki_header.png',
   instagram_icon: '/Instagram_Glyph_Gradient.svg'
 }
+const imageArray: string[] = Object.values(imageSources)
 const inter = Inter({ subsets: ['latin'] });
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [imagesLoaded, setImagesLoaded] = useState(false)
-
-  useEffect(() => {
-    const loadImages = async () => {
-      const imagePromises = Object.values(imageSources).map((src) => {
-        return new Promise((resolve, reject) => {
-          const img = new (window as any).Image() as HTMLImageElement
-          img.src = src
-          img.onload = resolve
-          img.onerror = reject
-        })
-      })
-
-      try {
-        await Promise.all(imagePromises)
-        setImagesLoaded(true)
-      } catch (error) {
-        console.error('Failed to load images:', error)
-      }
-    }
-
-    loadImages()
-  }, [])
-
-  if (!imagesLoaded) {
+  const imagesPreloaded = useImagePreloader(imageArray)
+  if (!imagesPreloaded) {
     return <div>Loading...</div>
   }
   return (
     <div className={inter.className}>
       <header>
-        <img src="" alt="" />
+          <img src={imageSources.header} alt="header"/>
         <HamburgerMenu />
       </header>
       {children}
@@ -51,7 +28,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           contact us
         </h4>
         <p>InstagramのDMよりお気軽にお問い合わせください。</p>
-        <a href="https://www.instagram.com/kotobuki_onsen.apartment/"><img src="" alt="Instagram" /></a>
+        <a href="https://www.instagram.com/kotobuki_onsen.apartment/"><img src={imageSources.instagram_icon} alt="Instagram" /></a>
         <h4 id={FooterStyle["address"]}>
           address
         </h4>
