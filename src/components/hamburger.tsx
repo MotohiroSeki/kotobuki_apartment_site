@@ -17,9 +17,11 @@ const HamburgerMenu = () => {
     return (
         <div>
             <div className={isOpen ? `${styles.menu} ${styles.open}` : styles.menu} onClick={toggleMenu}>
-                <div className={styles.bar}></div>
-                <div className={styles.bar}></div>
-                <div className={styles.bar}></div>
+                <div>
+                    <div className={styles.bar}></div>
+                    <div className={styles.bar}></div>
+                    <div className={styles.bar}></div>
+                </div>
             </div>
 
             {isOpen && (
