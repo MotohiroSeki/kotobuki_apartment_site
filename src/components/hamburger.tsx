@@ -38,9 +38,7 @@ const HamburgerMenu = () => {
                         <Link href="/access" passHref>
                             <div className={styles.link}>アクセス</div>
                         </Link>
-                        <Link href="/contact" passHref>
-                            <div className={styles.link}>お問い合わせ・内見申込</div>
-                        </Link>
+
                     </div>
                 </div>
             )}
