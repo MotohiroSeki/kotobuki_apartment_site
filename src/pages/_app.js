@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
         <meta name="discription" content="福岡市南区にある温泉付きのマンションです。各部屋で天然温泉が出るので毎日自分の好きな温度で一番風呂の天然温泉に入れます。春になると桜が咲きほこるので部屋によってはベランダから花見を楽しむこともできちゃいます。" />
+        <meta name="google-site-verification" content="nSKZhji32Vuz-4HVCCj4qvHt6j2o8a8XuaQTSexZvxY" />
       </Head>
       <Component {...pageProps} />
     </RootLayout>
