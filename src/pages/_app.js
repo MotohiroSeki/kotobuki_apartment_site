@@ -21,12 +21,6 @@ export default function App({ Component, pageProps }) {
         <meta name="google-site-verification" content="nSKZhji32Vuz-4HVCCj4qvHt6j2o8a8XuaQTSexZvxY" />
       </Head>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JNTF8034N"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
-        gtag('config', 'G-2JNTF8034N');
-      </script>
       <Component {...pageProps} />
     </RootLayout>
   )

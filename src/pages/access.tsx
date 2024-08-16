@@ -19,14 +19,14 @@ export default function Home() {
   ];
   return (
     <>
-      <head>
+      <Head>
         <title>ことぶきマンションへのアクセス</title>
         <meta property="og:title" content="ことぶきマンションへのアクセス" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://kotobuki-apartment-site.vercel.app/access_route/ohashi_west_route.png" />
         <meta property="og:url" content="https://kotobuki-apartment-site.vercel.app/access" />
         <meta property="og:description" content="最寄駅の大橋駅からことぶきマンションまでの行き方です。内見に来られる際や、お友達を部屋に招待するときなどにご活用ください。" />
-      </head>
+      </Head>
       <main>
         <div className={HomeStyle["home__body"]}>
           <h2 style={{ marginTop: 0 }}>
