@@ -7,6 +7,20 @@
     }
 }
 
+#phone_call {
+    &::before {
+        vertical-align: -15%;
+        margin: 0 7px 0 0;
+        font-family: 'Material Icons';
+        content: "\e0b0";
+    }
+    background-color: #e0cd94;
+    padding: 8px;
+    border-radius: 3px;
+    width: fit-content;
+    margin: 15px auto 0;
+}
+
 #address {
     &::before {
         vertical-align: -15%;
