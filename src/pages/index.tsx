@@ -27,7 +27,7 @@ export default function Home() {
             <h2>
               部屋で楽しめる天然温泉付き！
             </h2>
-            <img src="/hotspring_tap.png" />
+            <img src="/hotspring_tab.png" />
             ことぶきマンションの一番の特徴と言えばこの天然温泉！<br />
             各部屋のお風呂で蛇口から天然温泉が出るようになっているので、毎日温泉が楽しめます。
           </div>
