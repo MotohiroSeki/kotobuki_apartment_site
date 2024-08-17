@@ -32,9 +32,13 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           contact us
         </h4>
         <p>InstagramのDMまたはお電話よりお気軽にお問い合わせください。
-          <br/>
+          <br />
           内見希望の方もDMよりご連絡ください。</p>
-          <a href="tel:819011930437">電話番号：090-1193-0437</a>
+        <a href="tel:819011930437">
+          <div id={FooterStyle["phone_call"]}>
+            090-1193-0437
+          </div>
+        </a>
         <a href="https://www.instagram.com/kotobuki_onsen.apartment/"><img src={imageSources.instagram_icon} alt="Instagram" /></a>
         <h4 id={FooterStyle["address"]}>
           address
