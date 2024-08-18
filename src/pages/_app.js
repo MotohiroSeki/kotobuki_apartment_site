@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <RootLayout>
       <Head>
-        <title>ことぶきマンション:48度の天然温泉付き、福岡市南区のマンション</title>
+        <title>ことぶきマンション  |  48度の天然温泉付き、福岡市南区のマンション</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
         <link rel="icon" sizes="any" href="/favicons/favicon.ico" />
         <link rel="manifest" href="/favicons/site.webmanifest" />
