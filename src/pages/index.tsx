@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <head>
-        <title>ことぶきマンション</title>
+        <title>ことぶきマンション  |  48度の天然温泉付き、福岡市南区のマンション</title>
         <meta property="og:title" content="ことぶきマンション" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://kotobuki-apartment-site.vercel.app/kotobuki_apartment_outlook_accross_river.JPG" />
@@ -25,7 +25,7 @@ export default function Home() {
           温泉や桜並木など、魅力的な特徴がいっぱいです！
           <div id="about_hot_spring" className={style["home__body__contents"]}>
             <h2>
-              部屋で楽しめる天然温泉付き！
+              部屋で楽しめる48℃の天然温泉付き！
             </h2>
             <img src="/hotspring_tab.png" />
             ことぶきマンションの一番の特徴と言えばこの天然温泉！<br />
