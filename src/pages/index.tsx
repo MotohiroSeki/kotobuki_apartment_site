@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <head>
-        <title>ことぶきマンション  |  48度の天然温泉付き、福岡市南区のマンション</title>
+        <title>博多温泉 ことぶきマンション  |  48度の天然温泉付き、福岡市南区のマンション</title>
         <meta property="og:title" content="ことぶきマンション" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://kotobuki-apartment-site.vercel.app/kotobuki_apartment_outlook_accross_river.JPG" />
