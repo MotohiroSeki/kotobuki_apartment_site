@@ -39,7 +39,7 @@
   
   .arrow {
     border: none;
-    color: $arrow;
+    color: $accent-color-2;
     font-size: 2rem;
     padding: 0.5rem 50px;
     cursor: pointer;
@@ -47,7 +47,7 @@
     transition: background-color 0.3s;
   
     &:hover {
-        color: $arrow-hover;
+        color: $accent-color-3;
     }
   }
 
