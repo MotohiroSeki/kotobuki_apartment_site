@@ -10,7 +10,9 @@ export default function Sitemap() {
             <Link href="/access" passHref>
                 <div>アクセス</div>
             </Link>
-
+            <Link href="/vacancy" passHref>
+                <div>空き部屋情報</div>
+            </Link>
         </div>
     )
 }

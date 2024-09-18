@@ -5,7 +5,7 @@ import AccessStyle from '../styles/access.module.scss'
 import PictureSlider from '@/components/slider';
 import Head from 'next/head';
 
-export default function Home() {
+export default function Access() {
   const routeOhashiWestSide = [
     '/access_route/ohashi_west_exit.png',
     '/access_route/ohashi_west_route.png',
