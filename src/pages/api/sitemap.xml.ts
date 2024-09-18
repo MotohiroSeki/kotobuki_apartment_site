@@ -15,6 +15,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <loc>https://kotobuki-apartment-site.vercel.app/access</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
     </url>
+    <url>
+      <loc>https://kotobuki-apartment-site.vercel.app/vacancy</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+    </url>
   </urlset>`;
 
   res.end(xml);
