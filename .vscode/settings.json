@@ -1,0 +1,12 @@
+{
+  "workbench.colorCustomizations": {
+    "editor.background": "#e2f9f3",         // エディタ部分の背景色
+    "editor.foreground": "#695e5e",         // 文字色
+    "sideBar.background": "#bee6f0",        // サイドバーの背景
+    "activityBar.background": "#9ab47b",    // アクティビティバー（左のアイコン列）
+    "statusBar.background": "#8dcaf0",      // ステータスバーの背景
+    "titleBar.activeBackground": "#edf2ca", // タイトルバーの背景
+    "editorCursor.foreground": "#00b7d7",   // カーソル色
+    "editorLineNumber.foreground": "#7d482a"// 行番号の色
+  }
+}
