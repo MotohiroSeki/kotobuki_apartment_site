@@ -10,7 +10,7 @@ export default function Access() {
                 <title>博多温泉ことぶきマンションの空き部屋情報</title>
                 <meta property="og:title" content="博多温泉ことぶきマンションの空き部屋情報" />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://kotobuki-apartment-site.vercel.app/access_route/ohashi_west_route.png" />
+                <meta property="og:image" content="https://kotobuki-apartment-site.vercel.app/access_route/ohashi_west_route.jpeg" />
                 <meta property="og:url" content="https://kotobuki-apartment-site.vercel.app/vacancy" />
                 <meta property="og:description" content="博多温泉ことぶきマンションの空き部屋情報です。インスタグラムの投稿に合わせて更新いたしますので、インスタグラムもぜひご確認ください。" />
             </Head>
