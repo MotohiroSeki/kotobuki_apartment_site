@@ -7,15 +7,15 @@ import Head from 'next/head';
 
 export default function Access() {
   const routeOhashiWestSide = [
-    '/access_route/ohashi_west_exit.png',
-    '/access_route/ohashi_west_route.png',
-    '/access_route/right_turn_1.png',
-    '/access_route/route385.png',
-    '/access_route/left_turn_1.png',
-    '/access_route/yokote_new_street.png',
-    '/access_route/right_turn_2.png',
-    '/access_route/river_side_walk.png',
-    '/access_route/arrive.png'
+    '/access_route/ohashi_west_exit.jpeg',
+    '/access_route/ohashi_west_route.jpeg',
+    '/access_route/right_turn_1.jpeg',
+    '/access_route/route385.jpeg',
+    '/access_route/left_turn_1.jpeg',
+    '/access_route/yokote_new_street.jpeg',
+    '/access_route/right_turn_2.jpeg',
+    '/access_route/river_side_walk.jpeg',
+    '/access_route/arrive.jpeg'
   ];
   return (
     <>
@@ -23,7 +23,7 @@ export default function Access() {
         <title>ことぶきマンションへのアクセス</title>
         <meta property="og:title" content="ことぶきマンションへのアクセス" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://kotobuki-apartment-site.vercel.app/access_route/ohashi_west_route.png" />
+        <meta property="og:image" content="https://kotobuki-apartment-site.vercel.app/access_route/ohashi_west_route.jpeg" />
         <meta property="og:url" content="https://kotobuki-apartment-site.vercel.app/access" />
         <meta property="og:description" content="最寄駅の大橋駅からことぶきマンションまでの行き方です。内見に来られる際や、お友達を部屋に招待するときなどにご活用ください。" />
       </Head>
