@@ -32,7 +32,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           contact us
         </h4>
         <p>InstagramのDMまたはお電話よりお気軽にお問い合わせください。
-          <br/>
+          <br />
           内見希望の方もDMよりご連絡ください。</p>
         <a href="tel:819011930437">
           <div id={FooterStyle["phone_call"]}>
