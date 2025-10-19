@@ -7,8 +7,8 @@ import Link from 'next/link';
 
 
 const imageSources: { [key: string]: string } = {
-  header: 'kotobuki_header.png',
-  instagram_icon: 'Instagram_Glyph_Gradient.svg'
+  header: '/kotobuki_header.png',
+  instagram_icon: '/Instagram_Glyph_Gradient.svg'
 }
 const imageArray: string[] = Object.values(imageSources)
 const inter = Inter({ subsets: ['latin'] });

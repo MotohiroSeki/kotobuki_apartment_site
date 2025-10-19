@@ -7,15 +7,15 @@ import Head from 'next/head';
 
 export default function Access() {
   const routeOhashiWestSide = [
-    'access_route/ohashi_west_exit.png',
-    'access_route/ohashi_west_route.png',
-    'access_route/right_turn_1.png',
-    'access_route/route385.png',
-    'access_route/left_turn_1.png',
-    'access_route/yokote_new_street.png',
-    'access_route/right_turn_2.png',
-    'access_route/river_side_walk.png',
-    'access_route/arrive.png'
+    '/access_route/ohashi_west_exit.png',
+    '/access_route/ohashi_west_route.png',
+    '/access_route/right_turn_1.png',
+    '/access_route/route385.png',
+    '/access_route/left_turn_1.png',
+    '/access_route/yokote_new_street.png',
+    '/access_route/right_turn_2.png',
+    '/access_route/river_side_walk.png',
+    '/access_route/arrive.png'
   ];
   return (
     <>

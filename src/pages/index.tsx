@@ -4,9 +4,9 @@ import style from '../styles/home.module.scss'
 import PictureSlider from '@/components/slider';
 export default function Home() {
   const outlooks = [
-    'kotobuki_apartment_outlook_accross_river.JPG',
-    'kotobuki_night_view.png',
-    'kotobuki_riverside.png'
+    '/kotobuki_apartment_outlook_accross_river.JPG',
+    '/kotobuki_night_view.png',
+    '/kotobuki_riverside.png'
   ]
   return (
     <>
