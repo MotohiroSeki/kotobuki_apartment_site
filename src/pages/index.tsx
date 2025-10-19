@@ -2,6 +2,7 @@
 import './../styles/globals.scss'
 import style from '../styles/home.module.scss'
 import PictureSlider from '@/components/slider';
+import Head from 'next/head';
 import Image from 'next/image';
 export default function Home() {
   const outlooks = [
@@ -11,14 +12,14 @@ export default function Home() {
   ]
   return (
     <>
-      <head>
+      <Head>
         <title>博多温泉 ことぶきマンション  |  48度の天然温泉付き、福岡市南区のマンション</title>
         <meta property="og:title" content="ことぶきマンション" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://kotobuki-apartment-site.vercel.app/kotobuki_apartment_outlook_accross_river.JPG" />
         <meta property="og:url" content="https://kotobuki-apartment-site.vercel.app/" />
         <meta property="og:description" content="福岡市南区にある温泉付きのマンションです。各部屋で天然温泉が出るので毎日自分の好きな温度で一番風呂の天然温泉に入れます。春になると桜が咲きほこるので部屋によってはベランダから花見を楽しむこともできちゃいます。" />
-      </head>
+      </Head>
       <main>
         <div className={style["home__body"]}>
           <PictureSlider images={outlooks} delay={5000} />
