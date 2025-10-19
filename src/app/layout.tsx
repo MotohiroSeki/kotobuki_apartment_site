@@ -48,7 +48,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <iframe
           title="マンション所在地"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.1972817758983!2d130.43051827463813!3d33.548250244176245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354190e0449e9d9d%3A0x5070437419abad09!2z44CSODExLTEzMTEg56aP5bKh55yM56aP5bKh5biC5Y2X5Yy65qiq5omL77yU5LiB55uu77yR77yT4oiS77yT77yRIOWvv-ODnuODs-OCt-ODp-ODsw!5e0!3m2!1sja!2sjp!4v1760865421807!5m2!1sja!2sjp"
-          style={{ border: 0, maxWidth: '600px', width: '100%', height: 'auto'}}
+          style={{ border: 0, borderRadius:'3px', maxWidth: '600px', width: '100%', height: 'auto'}}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
