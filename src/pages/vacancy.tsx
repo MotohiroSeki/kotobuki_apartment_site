@@ -20,7 +20,7 @@ export default function Access() {
                         空き部屋情報
                     </h2>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <InstagramEmbed url="https://www.instagram.com/p/C-P5OmdS_dV/?utm_source=ig_embed&amp;utm_campaign=loading/" width={328} captioned />
+                        空き部屋情報なし
                     </div>
                 </div>
             </main>
