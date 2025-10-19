@@ -2,6 +2,7 @@
 import './../styles/globals.scss'
 import style from '../styles/home.module.scss'
 import PictureSlider from '@/components/slider';
+import Image from 'next/image';
 export default function Home() {
   const outlooks = [
     '/kotobuki_apartment_outlook_accross_river.JPG',
@@ -27,7 +28,14 @@ export default function Home() {
             <h2>
               部屋で楽しめる48℃の天然温泉付き！
             </h2>
-            <img src="/hotspring_tab.png" />
+            <Image
+              src="/hotspring_tab.png"
+              alt="温泉の紹介画像"
+              width={2000}
+              height={1115}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto' }}
+            />
             ことぶきマンションの一番の特徴と言えばこの天然温泉！<br />
             各部屋のお風呂で蛇口から天然温泉が出るようになっているので、毎日温泉が楽しめます。
           </div>
@@ -36,7 +44,14 @@ export default function Home() {
             <h2>
               目の前に広がる桜並木
             </h2>
-            <img src="/sakura_road.png" />
+            <Image
+              src="/sakura_road.png"
+              alt="桜並木の写真"
+              width={2000}
+              height={1499}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto' }}
+            />
             マンションの目の前には桜の木が植えられているので、春になると花見が楽しめます。<br />
             部屋によってはベランダから見えるので、プライベートな空間でのんびり花見が楽しめるかも！
           </div>
@@ -45,7 +60,14 @@ export default function Home() {
             <h2>
               ちょっと広めの1LDK
             </h2>
-            <img src="room_inside_view_1.JPG" />
+            <Image
+              src="/room_inside_view_1.JPG"
+              alt="ことぶきマンションの室内写真"
+              width={2000}
+              height={1333}
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ width: '100%', height: 'auto' }}
+            />
             40平米の広めのお部屋となっているので、一人で広々と使うことも、二人で一緒に住むこともできます。
           </div>
         </div>

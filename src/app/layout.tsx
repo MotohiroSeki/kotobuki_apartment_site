@@ -1,28 +1,34 @@
 'use client';
-import { Inter } from 'next/font/google';
+import type { CSSProperties, PropsWithChildren } from 'react';
 import HamburgerMenu from '../components/hamburger';
 import FooterStyle from '../styles/components/footer.module.scss';
-import useImagePreloader from '@/controller/useImagePreloader';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const imageSources: { [key: string]: string } = {
   header: '/kotobuki_header.png',
   instagram_icon: '/Instagram_Glyph_Gradient.svg'
 }
-const imageArray: string[] = Object.values(imageSources)
-const inter = Inter({ subsets: ['latin'] });
+const rootFontStyle: CSSProperties = {
+  fontFamily:
+    'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "YuGothic", "Meiryo", sans-serif'
+};
 
-const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const imagesPreloaded = useImagePreloader(imageArray)
-  if (!imagesPreloaded) {
-    return <div>Loading...</div>
-  }
+const RootLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div className={inter.className}>
+    <div style={rootFontStyle}>
       <header>
         <Link href="/">
-          <img src={imageSources.header} alt="header" />
+          <Image
+            src={imageSources.header}
+            alt="ことぶきマンションのヘッダー画像"
+            width={2700}
+            height={350}
+            priority
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+          />
         </Link>
         <HamburgerMenu />
       </header>
@@ -35,7 +41,15 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <br/>
           内見希望の方もDMよりご連絡ください。</p>
           <a href="tel:819011930437">電話番号：090-1193-0437</a>
-        <a href="https://www.instagram.com/kotobuki_onsen.apartment/"><img src={imageSources.instagram_icon} alt="Instagram" /></a>
+        <a href="https://www.instagram.com/kotobuki_onsen.apartment/">
+          <Image
+            src={imageSources.instagram_icon}
+            alt="Instagram"
+            width={120}
+            height={120}
+            sizes="120px"
+          />
+        </a>
         <h4 id={FooterStyle["address"]}>
           address
         </h4>
