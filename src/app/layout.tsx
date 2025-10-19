@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 
 const imageSources: { [key: string]: string } = {
-  header: '/kotobuki_header.jpeg',
+  header: '/kotobuki_header.png',
   instagram_icon: '/Instagram_Glyph_Black.svg'
 }
 const imageArray: string[] = Object.values(imageSources)
