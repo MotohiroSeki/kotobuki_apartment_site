@@ -9,22 +9,13 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom right,$background-darkest,$background-lightest);
-  max-width: 1280px;
-  padding: 0 10%;
-  @include mq(tb) {
-    padding: 0 40px;
-  }
-  img {
-    border-radius: 5px;
-    @include mq(tb) {
-      max-width: 800px;
-    }
-  }
   font-size: 1.5rem;
+
   header {
+    margin: 0 0 30px;
     @include mq(tb) {
       display: flex;
       justify-content: space-between;
@@ -73,7 +64,23 @@ body {
       width: 600px;
       height: 500px;
     }
-    
+
+  }
+}
+
+body .contents {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 10%;
+  @include mq(tb) {
+    padding: 0 40px;
+  }
+}
+
+body img {
+  border-radius: 5px;
+  @include mq(tb) {
+    max-width: 800px;
   }
 }
 
