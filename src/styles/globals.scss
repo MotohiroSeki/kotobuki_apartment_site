@@ -9,29 +9,20 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom right,$background-darkest,$background-lightest);
-  max-width: 1280px;
-  padding: 0 10%;
-  @include mq(tb) {
-    padding: 0 40px;
-  }
-  img {
-    border-radius: 5px;
-    @include mq(tb) {
-      max-width: 800px;
-    }
-  }
   font-size: 1.5rem;
+
   header {
+    margin: 0 0 30px;
     @include mq(tb) {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     max-width: 100%;
-    padding: 30px 0;
+    
     img {
       @include mq(tb) {
         width: calc(100% - 40px);
@@ -42,8 +33,11 @@ body {
   }
 
   footer {
-    margin: 120px -12%;
-    padding: 80px 15%;
+    margin: 120px auto;
+    padding: 80px 10%;
+    @include mq(tb) {
+      padding: 80px 40px;
+    }
     background-color: $accent-color;
     img {
       min-width: 70px;
@@ -73,7 +67,23 @@ body {
       width: 600px;
       height: 500px;
     }
-    
+
+  }
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 10%;
+  @include mq(tb) {
+    padding: 0 40px;
+  }
+}
+
+body img {
+  border-radius: 5px;
+  @include mq(tb) {
+    max-width: 800px;
   }
 }
 
