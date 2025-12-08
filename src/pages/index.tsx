@@ -12,6 +12,51 @@ export default function Home() {
     '/kotobuki_riverside.jpeg',
   ];
 
+  const highlightContents = [
+    {
+      id: 'hotspring',
+      title: '部屋で楽しめる48℃の天然温泉付き！',
+      text: 'お風呂の蛇口から天然温泉が出るので、自分の好きな温度で毎日一番風呂が楽しめます。',
+      image: '/hotspring_tab.jpeg',
+      align: 'left' as const,
+    },
+    {
+      id: 'sakura',
+      title: '春には桜並木が目の前に',
+      text: 'マンション前の桜並木は春の名物。ベランダからお花見気分を味わえるお部屋もあります。',
+      image: '/sakura_road.jpeg',
+      align: 'right' as const,
+    },
+    {
+      id: 'night',
+      title: '幻想的な夜景',
+      text: 'ライトアップされた建物がリバーサイドに映える幻想的な夜景を楽しめます。',
+      image: '/kotobuki_night_view.jpeg',
+      align: 'left' as const,
+    },
+    {
+      id: 'river',
+      title: '川辺に広がる景色',
+      text: '川沿いの遊歩道は散歩やジョギングにぴったり。水辺の開放感を日常で感じられます。',
+      image: '/kotobuki_riverside.jpeg',
+      align: 'right' as const,
+    },
+    {
+      id: 'room',
+      title: 'ちょっと広めの1LDK',
+      text: '40平米の広めのお部屋。ひとりでもふたりでも、心地よい距離感で暮らせます。',
+      image: '/room_inside_view_1.JPG',
+      align: 'left' as const,
+    },
+    {
+      id: 'outlook',
+      title: 'リバーサイドの眺め',
+      text: '川越しに眺める外観は青空とも相性抜群。季節ごとに違う表情を見せてくれます。',
+      image: '/kotobuki_apartment_outlook_accross_river.JPG',
+      align: 'right' as const,
+    },
+  ];
+
   const imagesToPreload = [
     ...outlooks,
     '/hotspring_tab.jpeg',
@@ -52,25 +97,47 @@ export default function Home() {
           <PictureSlider images={outlooks} delay={5000} />
           ことぶきマンションは福岡市南区にあるマンションです。<br />
           温泉や桜並木など、魅力的な特徴がいっぱいです！
-          <div id="about_hot_spring" className={style['home__body__contents']}>
-            <h2>部屋で楽しめる48℃の天然温泉付き！</h2>
-            <img src="/hotspring_tab.jpeg" alt="温泉のタブ" />
-            ことぶきマンションの一番の特徴と言えばこの天然温泉！<br />
-            各部屋のお風呂で蛇口から天然温泉が出るようになっているので、毎日温泉が楽しめます。
-          </div>
-
-          <div id="sakura" className={style['home__body__contents']}>
-            <h2>目の前に広がる桜並木</h2>
-            <img src="/sakura_road.jpeg" alt="桜並木" />
-            マンションの目の前には桜の木が植えられているので、春になると花見が楽しめます。<br />
-            部屋によってはベランダから見えるので、プライベートな空間でのんびり花見が楽しめるかも！
-          </div>
-
-          <div id="room" className={style['home__body__contents']}>
-            <h2>ちょっと広めの1LDK</h2>
-            <img src="/room_inside_view_1.JPG" alt="部屋の内観" />
-            40平米の広めのお部屋となっているので、一人で広々と使うことも、二人で一緒に住むこともできます。
-          </div>
+          <section className={style['home__storyboard']} aria-label="ことぶきマンションの魅力紹介">
+            <header className={style['home__storyboard__intro']}>
+              <p className={style['home__storyboard__eyebrow']}>HIGHLIGHT MOVIE</p>
+              <h2>PDFイメージに沿った動きで魅力を順番に紹介</h2>
+              <p className={style['home__storyboard__lede']}>
+                真ん中のガイドラインに沿って、左右交互にカードが浮かび上がるアニメーションを設定しました。
+                リポジトリ内の写真だけで、PDFに近いレイアウトと質感を再現しています。
+              </p>
+            </header>
+            <div className={style['home__storyboard__timeline']}>
+              <div className={style['home__storyboard__line']} aria-hidden>
+                <span className={style['home__storyboard__lineGlow']} />
+              </div>
+              {highlightContents.map((content, index) => (
+                <article
+                  key={content.id}
+                  className={
+                    content.align === 'left'
+                      ? style['home__storyboard__item--left']
+                      : style['home__storyboard__item--right']
+                  }
+                >
+                  <div className={style['home__storyboard__marker']}>
+                    <span
+                      className={style['home__storyboard__marker__ring']}
+                      style={{ animationDelay: `${index * 0.18}s` }}
+                    />
+                    <span className={style['home__storyboard__marker__dot']}>{index + 1}</span>
+                  </div>
+                  <div
+                    className={style['home__storyboard__panel']}
+                    style={{ animationDelay: `${index * 0.18}s` }}
+                  >
+                    <h3>{content.title}</h3>
+                    <p className={style['home__storyboard__text']}>{content.text}</p>
+                    <img src={content.image} alt={content.title} loading="lazy" />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
     </>
