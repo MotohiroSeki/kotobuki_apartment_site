@@ -97,29 +97,47 @@ export default function Home() {
           <PictureSlider images={outlooks} delay={5000} />
           ことぶきマンションは福岡市南区にあるマンションです。<br />
           温泉や桜並木など、魅力的な特徴がいっぱいです！
-          <div className={style['home__storyboard']}>
-            <div className={style['home__storyboard__line']} aria-hidden />
-            {highlightContents.map((content, index) => (
-              <div
-                key={content.id}
-                className={
-                  content.align === 'left'
-                    ? style['home__storyboard__row--left']
-                    : style['home__storyboard__row--right']
-                }
-              >
-                <div
-                  className={style['home__storyboard__card']}
-                  style={{ animationDelay: `${index * 0.25}s` }}
-                >
-                  <p className={style['home__storyboard__badge']}>{index + 1}</p>
-                  <h3>{content.title}</h3>
-                  <p className={style['home__storyboard__text']}>{content.text}</p>
-                  <img src={content.image} alt={content.title} loading="lazy" />
-                </div>
+          <section className={style['home__storyboard']} aria-label="ことぶきマンションの魅力紹介">
+            <header className={style['home__storyboard__intro']}>
+              <p className={style['home__storyboard__eyebrow']}>HIGHLIGHT MOVIE</p>
+              <h2>PDFイメージに沿った動きで魅力を順番に紹介</h2>
+              <p className={style['home__storyboard__lede']}>
+                真ん中のガイドラインに沿って、左右交互にカードが浮かび上がるアニメーションを設定しました。
+                リポジトリ内の写真だけで、PDFに近いレイアウトと質感を再現しています。
+              </p>
+            </header>
+            <div className={style['home__storyboard__timeline']}>
+              <div className={style['home__storyboard__line']} aria-hidden>
+                <span className={style['home__storyboard__lineGlow']} />
               </div>
-            ))}
-          </div>
+              {highlightContents.map((content, index) => (
+                <article
+                  key={content.id}
+                  className={
+                    content.align === 'left'
+                      ? style['home__storyboard__item--left']
+                      : style['home__storyboard__item--right']
+                  }
+                >
+                  <div className={style['home__storyboard__marker']}>
+                    <span
+                      className={style['home__storyboard__marker__ring']}
+                      style={{ animationDelay: `${index * 0.18}s` }}
+                    />
+                    <span className={style['home__storyboard__marker__dot']}>{index + 1}</span>
+                  </div>
+                  <div
+                    className={style['home__storyboard__panel']}
+                    style={{ animationDelay: `${index * 0.18}s` }}
+                  >
+                    <h3>{content.title}</h3>
+                    <p className={style['home__storyboard__text']}>{content.text}</p>
+                    <img src={content.image} alt={content.title} loading="lazy" />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
     </>
